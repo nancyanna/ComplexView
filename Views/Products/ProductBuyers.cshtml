@@ -1,0 +1,20 @@
+﻿@model ComplexViews.ViewModels.ProductBuyersViewModel
+@{
+    ViewData["Title"] = "ProductBuyers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ProductBuyers</h2>
+<h2>@Model.product.Name</h2>
+
+<h4>Customers who purchased this product</h4>
+
+<ul>
+    @foreach (var cust in Model.customers)
+    {
+
+        <li>@Html.DisplayFor(c => cust.FirstName)  @Html.DisplayFor(c => cust.LastName) </li>
+
+
+    }
+</ul>
